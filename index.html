@@ -3,43 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Horse Kick: Barrel Smash</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Horse Kick: Barrel Smash v2</title>
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
     
-    <!-- UI Overlay -->
-    <div id="ui-layer">
-        <div id="score-board">Удары: <span id="shots-left">0</span> | Уровень: <span id="level-num">1</span></div>
-        <button id="wisdom-btn" title="Совет от лошади">🐴💬</button>
-    </div>
-
-    <!-- Wisdom Modal -->
-    <div id="wisdom-modal" class="modal hidden">
+    <!-- Совет от лошади -->
+    <div id="adviceBtn" class="advice-btn">🐴💬</div>
+    <div id="adviceModal" class="modal hidden">
         <div class="modal-content">
-            <h3>🐴 Мудрость от Лошади</h3>
-            <p id="wisdom-text">...</p>
-            <button id="close-wisdom">Понял, спасибо!</button>
+            <div class="modal-header">
+                <span>🐴 Мудрость от Лошади</span>
+                <span id="closeAdvice" class="close">&times;</span>
+            </div>
+            <p id="adviceText">Загрузка мудрости...</p>
+            <button id="nextAdvice">Ещё мудрость</button>
         </div>
     </div>
 
-    <!-- Menu / Game Over Screens -->
-    <div id="menu-screen" class="screen">
-        <h1>HORSE KICK<br><span>Barrel Smash</span></h1>
-        <p>Пни бочку так, чтобы она попала в фермера!</p>
-        <button id="start-btn">ИГРАТЬ</button>
-    </div>
-
-    <div id="result-screen" class="screen hidden">
-        <h2 id="result-title">ПОБЕДА!</h2>
-        <p id="result-msg">Фермер получил по заслугам.</p>
-        <button id="next-level-btn">Следующий уровень</button>
-        <button id="restart-btn">Заново</button>
-    </div>
-
-    <script src="audio.js"></script>
-    <script src="particles.js"></script>
-    <script src="game.js"></script>
+    <script src="audio.js?v=2"></script>
+    <script src="particles.js?v=2"></script>
+    <script src="barrel.js?v=2"></script>
+    <script src="horse.js?v=2"></script>
+    <script src="trajectory.js?v=2"></script>
+    <script src="input.js?v=2"></script>
+    <script src="ui.js?v=2"></script>
+    <script src="levels.js?v=2"></script>
+    <script src="game.js?v=2"></script>
 </body>
 </html>
