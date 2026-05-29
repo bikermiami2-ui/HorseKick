@@ -1,53 +1,52 @@
+// Level definitions - barrel positions, farmer position, shots allowed
 const LEVELS = [
     {
-        kicks: 3,
-        farmerX: 0.8,
-        barrels: [
-            { x: 0.15, y: 0, w: 40, h: 50, hp: 999 },
-            { x: 0.5, y: 0, w: 40, h: 50, hp: 30 },
-            { x: 0.6, y: 0, w: 40, h: 50, hp: 30 }
-        ]
+        // Level 1: Simple direct shot
+        barrels: [],
+        farmer: { x: 600, y: null }, // y set dynamically based on ground
+        shots: 3,
+        name: "Первый удар"
     },
     {
-        kicks: 4,
-        farmerX: 0.85,
+        // Level 2: One obstacle barrel in the way
         barrels: [
-            { x: 0.15, y: 0, w: 45, h: 55, hp: 999 },
-            { x: 0.45, y: 0, w: 45, h: 55, hp: 40 },
-            { x: 0.55, y: 0, w: 45, h: 55, hp: 40 },
-            { x: 0.65, y: 0, w: 45, h: 55, hp: 40 }
-        ]
+            { x: 400, y: null, r: 25 }
+        ],
+        farmer: { x: 700, y: null },
+        shots: 3,
+        name: "Препятствие"
     },
     {
-        kicks: 4,
-        farmerX: 0.82,
+        // Level 3: Farmer behind two barrels
         barrels: [
-            { x: 0.15, y: 0, w: 50, h: 60, hp: 999 },
-            { x: 0.5, y: 0, w: 50, h: 60, hp: 60 },
-            { x: 0.6, y: 0, w: 35, h: 45, hp: 30 },
-            { x: 0.7, y: 0, w: 50, h: 60, hp: 60 }
-        ]
+            { x: 350, y: null, r: 25 },
+            { x: 500, y: null, r: 30 }
+        ],
+        farmer: { x: 750, y: null },
+        shots: 4,
+        name: "Двойная защита"
     },
     {
-        kicks: 5,
-        farmerX: 0.88,
+        // Level 4: Elevated farmer (on barrels)
         barrels: [
-            { x: 0.15, y: 0, w: 40, h: 50, hp: 999 },
-            { x: 0.45, y: 0, w: 40, h: 50, hp: 40 },
-            { x: 0.55, y: 0, w: 55, h: 65, hp: 80 },
-            { x: 0.65, y: 0, w: 40, h: 50, hp: 40 },
-            { x: 0.75, y: 0, w: 55, h: 65, hp: 80 }
-        ]
+            { x: 550, y: null, r: 25 },
+            { x: 550, y: null, r: 25, stackOn: 0 },
+            { x: 300, y: null, r: 20 }
+        ],
+        farmer: { x: 700, y: null, elevated: true },
+        shots: 4,
+        name: "Высотная цель"
     },
     {
-        kicks: 5,
-        farmerX: 0.85,
+        // Level 5: Chain reaction challenge
         barrels: [
-            { x: 0.15, y: 0, w: 60, h: 70, hp: 999 },
-            { x: 0.4, y: 0, w: 60, h: 70, hp: 100 },
-            { x: 0.52, y: 0, w: 35, h: 45, hp: 30 },
-            { x: 0.62, y: 0, w: 35, h: 45, hp: 30 },
-            { x: 0.74, y: 0, w: 60, h: 70, hp: 100 }
-        ]
+            { x: 300, y: null, r: 22 },
+            { x: 420, y: null, r: 28 },
+            { x: 520, y: null, r: 22 },
+            { x: 620, y: null, r: 25 }
+        ],
+        farmer: { x: 800, y: null },
+        shots: 3,
+        name: "Цепная реакция"
     }
 ];
