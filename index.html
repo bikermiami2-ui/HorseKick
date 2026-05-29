@@ -8,14 +8,29 @@
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
+    <!-- Horse Wisdom Button -->
+    <div id="wisdomBtn" title="Совет от лошади">🐴💬</div>
+    <!-- Horse Wisdom Modal -->
+    <div id="wisdomModal" class="hidden">
+        <div class="wisdom-content">
+            <div class="wisdom-header">
+                <span>🐴 Совет от лошади</span>
+                <span id="wisdomClose" class="wisdom-close">✕</span>
+            </div>
+            <p id="wisdomText"></p>
+            <button id="wisdomNext">Ещё мудрость →</button>
+        </div>
+    </div>
     <script src="audio.js"></script>
     <script src="particles.js"></script>
     <script src="barrel.js"></script>
     <script src="horse.js"></script>
+    <script src="farmer.js"></script>
     <script src="trajectory.js"></script>
     <script src="input.js"></script>
     <script src="ui.js"></script>
     <script src="levels.js"></script>
+    <script src="wisdom.js"></script>
     <script src="game.js"></script>
 </body>
 </html>
