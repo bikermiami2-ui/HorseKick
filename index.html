@@ -8,29 +8,38 @@
 </head>
 <body>
     <canvas id="gameCanvas"></canvas>
-    <!-- Horse Wisdom Button -->
-    <div id="wisdomBtn" title="Совет от лошади">🐴💬</div>
-    <!-- Horse Wisdom Modal -->
-    <div id="wisdomModal" class="hidden">
-        <div class="wisdom-content">
-            <div class="wisdom-header">
-                <span>🐴 Совет от лошади</span>
-                <span id="wisdomClose" class="wisdom-close">✕</span>
-            </div>
-            <p id="wisdomText"></p>
-            <button id="wisdomNext">Ещё мудрость →</button>
+    
+    <!-- UI Overlay -->
+    <div id="ui-layer">
+        <div id="score-board">Удары: <span id="shots-left">0</span> | Уровень: <span id="level-num">1</span></div>
+        <button id="wisdom-btn" title="Совет от лошади">🐴💬</button>
+    </div>
+
+    <!-- Wisdom Modal -->
+    <div id="wisdom-modal" class="modal hidden">
+        <div class="modal-content">
+            <h3>🐴 Мудрость от Лошади</h3>
+            <p id="wisdom-text">...</p>
+            <button id="close-wisdom">Понял, спасибо!</button>
         </div>
     </div>
+
+    <!-- Menu / Game Over Screens -->
+    <div id="menu-screen" class="screen">
+        <h1>HORSE KICK<br><span>Barrel Smash</span></h1>
+        <p>Пни бочку так, чтобы она попала в фермера!</p>
+        <button id="start-btn">ИГРАТЬ</button>
+    </div>
+
+    <div id="result-screen" class="screen hidden">
+        <h2 id="result-title">ПОБЕДА!</h2>
+        <p id="result-msg">Фермер получил по заслугам.</p>
+        <button id="next-level-btn">Следующий уровень</button>
+        <button id="restart-btn">Заново</button>
+    </div>
+
     <script src="audio.js"></script>
     <script src="particles.js"></script>
-    <script src="barrel.js"></script>
-    <script src="horse.js"></script>
-    <script src="farmer.js"></script>
-    <script src="trajectory.js"></script>
-    <script src="input.js"></script>
-    <script src="ui.js"></script>
-    <script src="levels.js"></script>
-    <script src="wisdom.js"></script>
     <script src="game.js"></script>
 </body>
 </html>
